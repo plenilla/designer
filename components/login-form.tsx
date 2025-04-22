@@ -18,48 +18,45 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
+          <CardTitle>Войдите в вашу учетную запись</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Введите ваш логин ниже, чтобы войти в свою учетную запись
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form>
             <div className="flex flex-col gap-6">
               <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="login">Логин</Label>
                 <Input
-                  id="email"
-                  type="email"
-                  placeholder="m@example.com"
+                  id="login"
+                  type="text"
+                  placeholder="Введите ваш логин"
                   required
                 />
               </div>
               <div className="grid gap-3">
                 <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">Пароль</Label>
                   <a
                     href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline text-blue-500"
                   >
-                    Forgot your password?
+                    Забыли пароль?
                   </a>
                 </div>
                 <Input id="password" type="password" required />
               </div>
               <div className="flex flex-col gap-3">
                 <Button type="submit" className="w-full">
-                  Login
-                </Button>
-                <Button variant="outline" className="w-full">
-                  Login with Google
+                  Войти
                 </Button>
               </div>
             </div>
             <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <a href="#" className="underline underline-offset-4">
-                Sign up
+              У вас нет аккаунта?{" "}
+              <a href="#" className="hover:underline underline-offset-4 text-blue-500">
+                Регистрация
               </a>
             </div>
           </form>
